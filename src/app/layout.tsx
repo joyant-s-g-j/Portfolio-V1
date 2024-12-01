@@ -22,7 +22,10 @@ export default function RootLayout({
         <link rel="icon" href="/next.svg" />
         <title>Joyfolio</title>
       </head>
-      <body className={twMerge(inter.variable, calistoga.variable, "bg-gray-900 text-white antialiased font-sans")}>{children}</body>
+      <body className={twMerge(inter.variable, calistoga.variable, "bg-gray-900 text-white antialiased font-sans")}>
+        {children}
+        
+      </body>
     </html>
   );
 }

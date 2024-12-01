@@ -55,18 +55,7 @@ export const HeroSection = () => {
             <h1 className='font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide'>Creativity Ignites Digital Innovation</h1>
             <p className='mt-4 text-center text-white/60 md:text-lg'>I turn designs into high-performing web apps. Let's create impactful digital experiences together.</p>
             </div>
-        </div>
-        
-      </div>
-      <div className='flex flex-col md:flex-row justify-center items-center mt-8 gap-4'>
-        <button className='inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl'>
-          <span className='font-semibold'>Explore my work</span>
-          <ArrowDown className='size-4' />
-        </button>
-        <button className='inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl'>
-          <span>👋</span>
-          <span className='font-semibold'>Let's Connect</span>
-        </button>
+        </div> 
       </div>
     </div>
   );
