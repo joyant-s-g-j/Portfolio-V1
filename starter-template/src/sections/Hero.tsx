@@ -2,8 +2,8 @@ import myImage from '@/assets/images/joy.png'
 import Image from 'next/image';
 import ArrowDown from '@/assets/icons/arrow-down.svg'
 import grainImage from "@/assets/images/grain.jpg"
-import StartIcon from "@/assets/icons/star.svg"
-import SparkleIcon from "@/assets/icons/sparkle.svg"
+import ReactIcon from "@/assets/icons/react.svg"
+import PythonIcon from "@/assets/icons/python.svg"
 import { HeroOrbit } from '@/components/HeroOrbit';
 export const HeroSection = () => {
   return (
@@ -19,22 +19,22 @@ export const HeroSection = () => {
         <div className='size-[1250px] hero-ring'></div>
         <div className='size-[1450px] hero-ring'></div>
         <HeroOrbit size={800} rotation={-90}> 
-          <StartIcon className='size-28 text-emerald-400'/>
+          <ReactIcon className='size-28 text-emerald-400 animate-spin [animation-duration:20s]'/>
         </HeroOrbit>
         <HeroOrbit size={550} rotation={20}> 
-          <StartIcon className='size-12 text-emerald-400'/>
+          <ReactIcon className='size-12 text-emerald-400 animate-spin [animation-duration:20s]'/>
         </HeroOrbit>
         <HeroOrbit size={600} rotation={100}> 
-          <StartIcon className='size-8 text-emerald-400'/>
+          <ReactIcon className='size-8 text-emerald-400 animate-spin [animation-duration:20s]'/>
         </HeroOrbit>
         <HeroOrbit size={430} rotation={-1}> 
-          <SparkleIcon className='size-8 text-emerald-400/20'/>
+          <PythonIcon className='size-8 text-emerald-400/20 animate-spin [animation-duration:20s]'/>
         </HeroOrbit>
-        <HeroOrbit size={300} rotation={90}> 
-          <SparkleIcon className='size-12 text-emerald-400/20'/>
+        <HeroOrbit size={330} rotation={90}> 
+          <PythonIcon className='size-12 text-emerald-400/20 animate-spin [animation-duration:20s]'/>
         </HeroOrbit>
         <HeroOrbit size={800} rotation={100}> 
-          <SparkleIcon className='size-20 text-emerald-400/20'/>
+          <PythonIcon className='size-20 text-emerald-400/20 animate-spin [animation-duration:20s]'/>
         </HeroOrbit>
         <HeroOrbit size={520} rotation={-41}> 
           <div className='size-2 rounded-full bg-emerald-300/20'></div>
@@ -46,15 +46,15 @@ export const HeroSection = () => {
       
       <div className="container">
         <div className='flex flex-col items-center'>
-          <Image src={myImage} className='size-[160px]' alt="Joyant Image" />
-          <div className='bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg'>
+          <Image src={myImage} className='size-[220px] border border-emerald-300/20 rounded-full animate-profile' alt="Joyant Image" />
+          <div className='bg-gray-950 border border-gray-800 mt-3 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg'>
             <div className='bg-green-600 size-2.5 rounded-full'></div>
-            <div className='text-sm font-semibold'>Available for new projects</div>
+            <div className='text-sm font-semibold'>Available for New Opportunities</div>
           </div>
           <div className='max-w-lg mx-auto'>
-            <h1 className='font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide'>Building Exceptional User Experiences</h1>
-            <p className='mt-4 text-center text-white/60 md:text-lg'>I specialize in turning innovative designs into seamless, high-performing web applications. Let’s collaborate to bring your next project to life!</p>
-          </div>
+            <h1 className='font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide'>Creativity Ignites Digital Innovation</h1>
+            <p className='mt-4 text-center text-white/60 md:text-lg'>I turn designs into high-performing web apps. Let's create impactful digital experiences together.</p>
+            </div>
         </div>
         
       </div>
