@@ -2,24 +2,48 @@ import myImage from '@/assets/images/joy.png'
 import Image from 'next/image';
 import ArrowDown from '@/assets/icons/arrow-down.svg'
 import grainImage from "@/assets/images/grain.jpg"
-import AlgoIcon from "@/assets/icons/algo.svg"
-import { url } from 'inspector';
+import StartIcon from "@/assets/icons/star.svg"
+import SparkleIcon from "@/assets/icons/sparkle.svg"
 import { HeroOrbit } from '@/components/HeroOrbit';
 export const HeroSection = () => {
   return (
     <div className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip'>
-      <div className='absolute inset-0 -z-30 opacity-5' style={{
-        backgroundImage: `url(${grainImage.src})`,
-      }}>
+      <div className="absolute inset-0 mask-gradient">
+        <div className='absolute inset-0 -z-30 opacity-5' style={{
+          backgroundImage: `url(${grainImage.src})`,
+        }}>
+        </div>
+        <div className='size-[650px] hero-ring'></div>
+        <div className='size-[850px] hero-ring'></div>
+        <div className='size-[1050px] hero-ring'></div>
+        <div className='size-[1250px] hero-ring'></div>
+        <div className='size-[1450px] hero-ring'></div>
+        <HeroOrbit size={800} rotation={-90}> 
+          <StartIcon className='size-28 text-emerald-400'/>
+        </HeroOrbit>
+        <HeroOrbit size={550} rotation={20}> 
+          <StartIcon className='size-12 text-emerald-400'/>
+        </HeroOrbit>
+        <HeroOrbit size={600} rotation={100}> 
+          <StartIcon className='size-8 text-emerald-400'/>
+        </HeroOrbit>
+        <HeroOrbit size={430} rotation={-1}> 
+          <SparkleIcon className='size-8 text-emerald-400/20'/>
+        </HeroOrbit>
+        <HeroOrbit size={300} rotation={90}> 
+          <SparkleIcon className='size-12 text-emerald-400/20'/>
+        </HeroOrbit>
+        <HeroOrbit size={800} rotation={100}> 
+          <SparkleIcon className='size-20 text-emerald-400/20'/>
+        </HeroOrbit>
+        <HeroOrbit size={520} rotation={-41}> 
+          <div className='size-2 rounded-full bg-emerald-300/20'></div>
+        </HeroOrbit>
+        <HeroOrbit size={600} rotation={-5}> 
+          <div className='size-2 rounded-full bg-emerald-300/20'></div>
+        </HeroOrbit>
       </div>
-      <div className='size-[650px] hero-ring'></div>
-      <div className='size-[850px] hero-ring'></div>
-      <div className='size-[1050px] hero-ring'></div>
-      <div className='size-[1250px] hero-ring'></div>
-      <div className='size-[1450px] hero-ring'></div>
-      <HeroOrbit size={800}> 
-              <AlgoIcon className='size-28 text-emerald-300'/>
-      </HeroOrbit>
+      
       <div className="container">
         <div className='flex flex-col items-center'>
           <Image src={myImage} className='size-[160px]' alt="Joyant Image" />

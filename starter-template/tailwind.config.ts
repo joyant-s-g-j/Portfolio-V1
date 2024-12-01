@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+import plugin from "tailwindcss/plugin";
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -27,6 +27,15 @@ const config: Config = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".mask-gradient": {
+          maskImage: "linear-gradient(to bottom, transparent, black 10%, black 50%, transparent)",
+          WebkitMaskImage: "linear-gradient(to bottom, transparent, black 10%, black 50%, transparent)",
+        },
+      });
+    }),
+  ],
 };
 export default config;
