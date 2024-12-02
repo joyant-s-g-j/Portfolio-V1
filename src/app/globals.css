@@ -22,9 +22,12 @@
         }
       }
     
-      /* Optional: Add a custom class to use the animation */
       .animate-profile {
         animation: profile_animate 8s ease-in-out infinite 1s;
+      }
+
+      html {
+        scroll-behavior: smooth;
       }
 
 };

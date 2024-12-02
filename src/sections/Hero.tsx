@@ -1,13 +1,15 @@
 import myImage from '@/assets/images/joy.png'
 import Image from 'next/image';
-import ArrowDown from '@/assets/icons/arrow-down.svg'
 import grainImage from "@/assets/images/grain.jpg"
 import ReactIcon from "@/assets/icons/react.svg"
 import PythonIcon from "@/assets/icons/python.svg"
 import { HeroOrbit } from '@/components/HeroOrbit';
 export const HeroSection = () => {
   return (
-    <div className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip'>
+    <div>
+
+    
+    <div id='home' className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip'>
       <div className="absolute inset-0 mask-gradient">
         <div className='absolute inset-0 -z-30 opacity-5' style={{
           backgroundImage: `url(${grainImage.src})`,
@@ -52,11 +54,16 @@ export const HeroSection = () => {
             <div className='text-sm font-semibold'>Available for New Opportunities</div>
           </div>
           <div className='max-w-lg mx-auto'>
-            <h1 className='font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide'>Creativity Ignites Digital Innovation</h1>
+            <h1 className='font-semibold text-3xl md:text-5xl text-center mt-8 tracking-wide'>Creativity Ignites Digital Innovation</h1>
             <p className='mt-4 text-center text-white/60 md:text-lg'>I turn designs into high-performing web apps. Let's create impactful digital experiences together.</p>
             </div>
         </div> 
       </div>
     </div>
+    <div className="mx-10 my-5">
+      <p className="text-6xl font-medium md:text-3xl sm:text-lg">Welcome to my virtual space! Dive into a world of creativity, innovation, and technology. Here, I blend design and logic to craft meaningful digital experiences.</p>
+    </div>
+  <hr className="border-t-2 border-gray-500 mx-10 w-[calc(100%-5rem)]" />
+  </div>
   );
 };
