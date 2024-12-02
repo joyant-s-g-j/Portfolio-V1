@@ -61,7 +61,7 @@ export const HeroSection = () => {
       </div>
     </div>
     <div className="mx-10 my-5">
-      <p className="text-6xl font-medium md:text-3xl sm:text-lg">Welcome to my virtual space! Dive into a world of creativity, innovation, and technology. Here, I blend design and logic to craft meaningful digital experiences.</p>
+      <p className="lg:text-6xl font-medium md:text-3xl sm:text-lg">Welcome to my virtual space! Dive into a world of creativity, innovation, and technology. Here, I blend design and logic to craft meaningful digital experiences.</p>
     </div>
   <hr className="border-t-2 border-gray-500 mx-10 w-[calc(100%-5rem)]" />
   </div>
