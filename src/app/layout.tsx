@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/next.svg" />
+        <link rel="icon" href="/joy.svg" />
         <title>Joyfolio</title>
       </head>
       <body className={twMerge(inter.variable, calistoga.variable, "bg-gray-900 text-white antialiased font-sans")}>
