@@ -55,7 +55,7 @@ export const HeroSection = () => {
           </div>
           <div className='max-w-lg mx-auto'>
             <h1 className='font-semibold text-3xl md:text-5xl text-center mt-8 tracking-wide'>Creativity Ignites Digital Innovation</h1>
-            <p className='mt-4 text-center text-white/60 md:text-lg'>I turn designs into high-performing web apps. Let&apos;s create impactful digital experiences together.</p>
+            <p className='mt-4 text-center text-white/60 md:text-lg'>I turn designs into high-performing web apps. Let create impactful digital experiences together.</p>
             </div>
         </div> 
       </div>
