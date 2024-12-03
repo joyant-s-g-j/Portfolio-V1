@@ -4,11 +4,10 @@ import grainImage from "@/assets/images/grain.jpg"
 import ReactIcon from "@/assets/icons/react.svg"
 import PythonIcon from "@/assets/icons/python.svg"
 import { HeroOrbit } from '@/components/HeroOrbit';
+import Marquee from "@/components/Marquee";
 export const HeroSection = () => {
   return (
-    <div>
-
-    
+    <div data-scroll data-scroll-section data-scroll-speed="-.3">
     <div id='home' className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip'>
       <div className="absolute inset-0 mask-gradient">
         <div className='absolute inset-0 -z-30 opacity-5' style={{
@@ -60,6 +59,7 @@ export const HeroSection = () => {
         </div> 
       </div>
     </div>
+    <Marquee />
     <div className="mx-10 my-5">
       <p className="lg:text-6xl font-medium md:text-3xl sm:text-lg">Welcome to my virtual space! Dive into a world of creativity, innovation, and technology. Here, I blend design and logic to craft meaningful digital experiences.</p>
     </div>
