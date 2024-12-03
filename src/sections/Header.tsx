@@ -21,16 +21,36 @@ const useScrollPosition = (threshold = 50) => {
   return isScrolled;
 };
 
-// Usage in Header
 export const Header = () => {
   const isScrolled = useScrollPosition(50);
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
     <div className={`flex justify-between items-center fixed py-3 px-10 w-full z-10 transition-all duration-300 ${isScrolled ? " backdrop-blur-md" : "bg-transparent"}`}>
-      <div className="flex items-center gap-2">
-        <Image src={myImage} alt="Logo" className="w-16 h-16" />
+      <div className="flex sm:items-center sm:justify-center">
+        <div className="dropdown relative lg:hidden">
+          <div tabIndex={0} role="button" className="btn btn-ghost text-white" onClick={toggleMenu}>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul tabIndex={0} className={`menu absolute menu-sm dropdown-content backdrop-blur-sm rounded-lg  text-gray-200 z-[1] mt-4 w-40 p-2 shadow ${isMenuOpen ? "block" : "hidden"}`}>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        
+        <div className="flex items-center gap-2">
+          <Image src={myImage} alt="Logo" className="w-16 h-16" />
+        </div>
       </div>
-      <div className="ml-16">
+      <div className="ml-16 sm:hidden md:block lg:block">
         <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full">
           <a href="#home" className="nav-item">Home</a>
           <a href="#about" className="nav-item">About</a>
