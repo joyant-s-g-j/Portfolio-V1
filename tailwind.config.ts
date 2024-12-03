@@ -12,7 +12,7 @@ const config: Config = {
       sm: "320px",
       md: "768px",
       lg: "1024px",
-      xl: '1280px',
+      xl: '1440px',
     },
     container: {
       center: true,
