@@ -4,7 +4,6 @@ import grainImage from "@/assets/images/grain.jpg"
 import ReactIcon from "@/assets/icons/react.svg"
 import PythonIcon from "@/assets/icons/python.svg"
 import { HeroOrbit } from '@/components/HeroOrbit';
-import Marquee from "@/components/Marquee";
 export const HeroSection = () => {
   return (
     <div data-scroll data-scroll-section data-scroll-speed="-.3">
@@ -48,8 +47,10 @@ export const HeroSection = () => {
       <div className="container">
         <div className='flex flex-col items-center'>
           <Image src={myImage} className='size-[220px] border border-emerald-300/20 rounded-full animate-profile' alt="Joyant Image" />
-          <div className='bg-gray-950 border border-gray-800 mt-3 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg'>
-            <div className='bg-green-600 size-2.5 rounded-full'></div>
+          <div className='bg-gray-950 border border-gray-500 mt-3 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg'>
+            <div className='bg-green-600 size-2.5 rounded-full relative'>
+              <div className='bg-green-600 absolute inset-0 rounded-full animate-ping-large'></div>
+            </div>
             <div className='text-sm font-semibold'>Available for New Opportunities</div>
           </div>
           <div className='max-w-lg mx-auto'>
@@ -59,11 +60,8 @@ export const HeroSection = () => {
         </div> 
       </div>
     </div>
-    <Marquee />
-    <div className="mx-10 my-5">
-      <p className="lg:text-6xl font-medium md:text-3xl sm:text-lg">Welcome to my virtual space! Dive into a world of creativity, innovation, and technology. Here, I blend design and logic to craft meaningful digital experiences.</p>
-    </div>
-  <hr className="border-t-2 border-gray-500 mx-10 w-[calc(100%-5rem)]" />
+    
+    
   </div>
   );
 };

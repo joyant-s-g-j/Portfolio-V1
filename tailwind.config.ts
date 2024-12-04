@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 import plugin from "tailwindcss/plugin";
 const config: Config = {
@@ -13,6 +14,7 @@ const config: Config = {
       md: "768px",
       lg: "1024px",
       xl: '1440px',
+      "2xl": "2560px",
     },
     container: {
       center: true,
@@ -25,6 +27,17 @@ const config: Config = {
       fontFamily: {
         sans: 'var(--font-sans)',
         serif: 'var(--font-serif)',
+      },
+      animation: {
+        "ping-large": "ping-large 1s ease-in-out infinite"
+      },
+      keyframes: {
+        'ping-large': {
+          '75%, 100%': {
+            transform: 'scale(3)',
+            opacity: '0',
+          }
+        }
       }
     },
   },
