@@ -1,29 +1,151 @@
-import myImage from '@/assets/images/joy.png'
+'use client'
+import whoImage from '@/assets/images/grid1.png'
+import toolImage from '@/assets/images/grid2.png'
+import eduImage from '@/assets/images/grid3.png'
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
+import {Card} from '@/components/Card'
+import StarIcon from '@/assets/icons/star.svg'
+import JavaScriptIcon from '@/assets/icons/square-js.svg'
+import HTMLIcon from '@/assets/icons/html5.svg'
+import CssIcon from '@/assets/icons/css3.svg'
+import ReactIcon from '@/assets/icons/react.svg'
+import GithubIcon from '@/assets/icons/github.svg'
+import { TechIcon } from '@/components/TechIcon';
+import { CardHeader } from '@/components/CardHeader';
+import { ToolboxItems } from '@/components/ToolboxItems';
+
+const toolboxItems = [
+  {
+    title: 'JavaScript',
+    iconType: JavaScriptIcon,
+  },
+  {
+    title: 'HTML5',
+    iconType: HTMLIcon,
+  },
+  {
+    title: 'CSS3',
+    iconType: CssIcon,
+  },
+  {
+    title: 'React',
+    iconType: ReactIcon,
+  },
+  {
+    title: 'Github',
+    iconType: GithubIcon,
+  }
+];
+
+const hobbies = [
+  {
+    title: 'Photography',
+    emoji: '📸'
+  },
+  {
+    title: 'Gaming',
+    emoji: '🎮'
+  },
+  {
+    title: 'Exploring',
+    emoji: '🌐'
+  },
+  {
+     title: 'Writing',
+    emoji: '✍️'
+  },
+  {
+    title: 'Traveling',
+    emoji: '✈️'
+  },
+  {
+    title: 'Reading',
+    emoji: '📚'
+  },
+  {
+    title: 'Music',
+    emoji: '🎵'
+  },
+]
+
+const Globe = dynamic(() => import('react-globe.gl'), { ssr: false });
+
 export const AboutSection = () => {
+  const imageWho = whoImage.src;
+  const imageTool = toolImage.src;
   return (   
-    <div id="about" className="flex flex-col space-y-4 lg:mx-10 md:mx-10 sm:mx-2 pt-24 h-screen">
-      <h1 className="mx-10 sm:mx-2 text-4xl font-semibold">About Me</h1>
-      <hr className="border-t-2 border-gray-500 mx-10 sm:mx-2 w-auto" />
-      <div className='flex lg:flex-row sm:flex-col sm:gap-y-10 md:flex-col md:gap-y-10 lg:gap-x-30 xl:gap-x-40'>
-        <div className="flex flex-col gap-5 sm:mx-2 mx-10 xl:max-w-3xl lg:max-w-xl">
-          <h1 className="xl:text-5xl font-extrabold text-white lg:text-4xl md:text-5xl sm:text-2xl">Joyant Sheikhar Gupta Joy</h1>
-          <div className="flex flex-col gap-5 lg:w-2/3 xl:w-full text-start font-sans text-gray-300 leading-7">
-            <p >
-              I'm a passionate developer with expertise in <span className="text-sky-500">HTML, CSS, JavaScript, React, C++, Python, Java & Django</span>. I specialize in creating efficient, innovative solutions that seamlessly blend design with functionality. I am constantly exploring new technologies to enhance my skill set and deliver impactful, user-centered web applications.
-            </p>
-            <p>
-              As a <span className="text-sky-500">Computer Science & Engineering</span> student at ADUST, I am deeply committed to problem-solving and expanding my knowledge. I thrive in collaborative environments and am driven by the opportunity to build innovative applications that enhance user experiences.
-            </p>
-            <p>
-              Connect with me, I can bring your ideas to life with cutting-edge solutions!
-            </p>
+    <section id='about' className=" pt-24 mb-20 lg:mx-10 md:mx-10 sm:mx-3">
+      <h1 className='text-4xl font-semibold'>About Me</h1>
+      <hr className="border-t-2 border-gray-500 w-[calc(100%-5rem)] my-3 sm:w-auto" />
+      <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
+        <Card className="col-span-1 xl:row-span-3 border">
+          <CardHeader title='My Info' imageUrl={imageWho} description="I'm Joyant, a developer skilled in HTML, CSS, JavaScript, React, C++, SQL, Python, Java, and Django passionate about crafting functional and innovative solutions." />
+        </Card>
+
+        <Card className="col-span-1 xl:row-span-3 border">
+          <CardHeader title='Skills & Tools' imageUrl={imageTool} description=""/>
+          <ToolboxItems items={toolboxItems} itemsWrapperClassName='animate-move-left [animation-duration:30s] [animation-timing-function:linear] [animation-iteration-count:infinite]'/>
+          <ToolboxItems items={toolboxItems} className='mt-2' itemsWrapperClassName='animate-move-right [animation-duration:30s] [animation-timing-function:linear] [animation-iteration-count:infinite]'/>
+        </Card>
+
+        <Card className='col-span-1 xl:row-span-4 border'>
+          <div className='grid-container'>
+            <div className='rounded-3xl w-full sm:h-[326px] h-fit flex flex-col items-center py-10'>
+              <Globe height={326} width={326} backgroundColor='rgba(0, 0, 0, 0)' showAtmosphere showGraticules globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg" bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png" labelsData={[{ lat: 23.8103, lng: 90.4125, text: "I'm here", color: 'white', size: 15 }]}              />
+              <div className='px-10'>
+                <p className='grid-headtext'>I work remotely across most timezones</p>
+                <p className='grid-subtext'>I'm based in Bangladesh, with remote work availbale</p>
+                <div className='bg-gray-950 border border-gray-500 mt-3 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg'>
+                  <div className='bg-green-600 size-2.5 rounded-full relative'>
+                    <div className='bg-green-600 absolute inset-0 rounded-full animate-ping-large'></div>
+                  </div>
+                  <div className='text-sm font-semibold'>Available for New Opportunities</div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className='flex justify-center'>
-          <Image src={myImage} className='size-[420px] sm:size-[350px] border border-emerald-300/20 rounded-md' alt="Joyant Image" />
-        </div>
+        </Card>
+
+        <Card className="xl:col-span-2 xl:row-span-3 border shadow-lg">
+        <CardHeader title='My Education'  description="" />
+          <div className="grid xl:flex justify-between mt-7 items-center gap-10 p-4 relative">
+            <div className="w-full xl:w-1/2">
+              <Image src={eduImage} alt="grid-3" className="w-full h-auto sm:h-[266px] object-contain" />
+            </div>
+            <div className="border-l-4 absolute left-1/2 border-gray-400 text-white/60 h-full p-5 justify-center flex flex-col gap-4">
+              <div className='relative border rounded-lg p-2 before:absolute before:top-[10px] before:left-[-30px] before:w-[15px] before:h-[15px] before:bg-black before:border-4 before:border-gray-300 before:rounded-full'>
+                <h1 className='font-semibold'>ADUST</h1>
+                <p className='text-xs'>Computer Science & Engineering</p>
+                <p className='text-xs'>2024 - Present</p>
+              </div>
+              <div className='relative border rounded-lg p-2 before:absolute before:top-[10px] before:left-[-30px] before:w-[15px] before:h-[15px] before:bg-black before:border-4 before:border-gray-300 before:rounded-full'>
+                <h1 className='font-semibold'>Phitron</h1>
+                <p className='text-xs'>Software Developmet</p>
+                <p className='text-xs'>2023 - 2024</p>
+              </div>
+              <div className='relative border rounded-lg p-2 before:absolute before:top-[10px] before:left-[-30px] before:w-[15px] before:h-[15px] before:bg-black before:border-4 before:border-gray-300 before:rounded-full'>
+                <h1 className='font-semibold'>Sheriyan Coding School</h1>
+                <p className='text-xs'>Frontend Development</p>
+                <p className='text-xs'>2023 - 2024</p>
+              </div>
+            </div>
+          </div>
+        </Card>
+
+
+        <Card className='xl:col-span-1 xl:row-span-2 border'>
+          <CardHeader title='Beyond the Code' imageUrl={''} description="" />
+          <div>
+              {hobbies.map (hobby => (
+                <div key={hobby.title}>
+                  <span>{hobby.title}</span>
+                  <span>{hobby.emoji}</span>
+                </div>
+              ))}
+          </div>
+        </Card>
       </div>
-    </div>
-  );
-};
+    </section>
+  )
+}

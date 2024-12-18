@@ -7,8 +7,8 @@ const inter = Inter({subsets: ["latin"], variable: "--font-sans"});
 const calistoga = Calistoga({subsets: ["latin"], variable: "--font-serif", weight: ["400"]});
 
 export const metadata: Metadata = {
-  title: "Joyfolio",
-  description: "Created with the help of Frontend Tribe",
+  title: "Joy-Verse",
+  description: "Created by Joyant",
 };
 
 export default function RootLayout({

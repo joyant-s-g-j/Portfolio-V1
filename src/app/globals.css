@@ -30,4 +30,28 @@
         scroll-behavior: smooth;
       }
 
+      @keyframes move-left {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    
+    @keyframes move-right {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(100%);
+        }
+    }
+      
+      .animate-move-left {
+        animation: move-left 2s linear infinite;
+      }
+      .animate-move-right {
+        animation: move-right 2s linear infinite;
+      }
 };
