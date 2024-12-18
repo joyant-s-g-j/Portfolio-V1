@@ -5,38 +5,8 @@ import eduImage from '@/assets/images/grid3.png'
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import {Card} from '@/components/Card'
-import StarIcon from '@/assets/icons/star.svg'
-import JavaScriptIcon from '@/assets/icons/square-js.svg'
-import HTMLIcon from '@/assets/icons/html5.svg'
-import CssIcon from '@/assets/icons/css3.svg'
-import ReactIcon from '@/assets/icons/react.svg'
-import GithubIcon from '@/assets/icons/github.svg'
-import { TechIcon } from '@/components/TechIcon';
 import { CardHeader } from '@/components/CardHeader';
-import { ToolboxItems } from '@/components/ToolboxItems';
-
-const toolboxItems = [
-  {
-    title: 'JavaScript',
-    iconType: JavaScriptIcon,
-  },
-  {
-    title: 'HTML5',
-    iconType: HTMLIcon,
-  },
-  {
-    title: 'CSS3',
-    iconType: CssIcon,
-  },
-  {
-    title: 'React',
-    iconType: ReactIcon,
-  },
-  {
-    title: 'Github',
-    iconType: GithubIcon,
-  }
-];
+import { SkillsMaarque } from '@/components/SkillMarquee';
 
 const hobbies = [
   {
@@ -80,16 +50,16 @@ export const AboutSection = () => {
       <hr className="border-t-2 border-gray-500 w-[calc(100%-5rem)] my-3 sm:w-auto" />
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <Card className="col-span-1 xl:row-span-3 border">
-          <CardHeader title='My Info' imageUrl={imageWho} description="I'm Joyant, a developer skilled in HTML, CSS, JavaScript, React, C++, SQL, Python, Java, and Django passionate about crafting functional and innovative solutions." />
+          <CardHeader title='My Info' imageUrl={imageWho} description="I'm Joyant, a developer skilled in HTML, CSS, JavaScript, React, C++, SQL, Python, Java, and Django, passionate about crafting functional solutions and building scalable web applications." />
         </Card>
 
         <Card className="col-span-1 xl:row-span-3 border">
           <CardHeader title='Skills & Tools' imageUrl={imageTool} description=""/>
-          <ToolboxItems items={toolboxItems} itemsWrapperClassName='animate-move-left [animation-duration:30s] [animation-timing-function:linear] [animation-iteration-count:infinite]'/>
-          <ToolboxItems items={toolboxItems} className='mt-2' itemsWrapperClassName='animate-move-right [animation-duration:30s] [animation-timing-function:linear] [animation-iteration-count:infinite]'/>
+          <SkillsMaarque/>
         </Card>
 
         <Card className='col-span-1 xl:row-span-4 border'>
+        <CardHeader title='My Location' imageUrl="" description=""/>
           <div className='grid-container'>
             <div className='rounded-3xl w-full sm:h-[326px] h-fit flex flex-col items-center py-10'>
               <Globe height={326} width={326} backgroundColor='rgba(0, 0, 0, 0)' showAtmosphere showGraticules globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg" bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png" labelsData={[{ lat: 23.8103, lng: 90.4125, text: "I'm here", color: 'white', size: 15 }]}              />

@@ -12,7 +12,7 @@
     "@react-three/drei": "^9.120.2",
     "@react-three/fiber": "^8.17.10",
     "@svgr/webpack": "^8.1.0",
-    "framer-motion": "^11.13.0",
+    "framer-motion": "^11.15.0",
     "globe.gl": "^2.34.2",
     "locomotive-scroll": "^5.0.0-beta.21",
     "next": "^14.2.18",
@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^18",
+    "@types/react": "^18.3.17",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.20",
     "eslint": "^8",
