@@ -1,9 +1,8 @@
 "use client";
 
 import myImage from "@/assets/images/joyant.png"
-import Image from 'next/image';
-
-import { useState, useEffect } from "react";
+import Image from 'next/image'
+import { useState, useEffect } from "react"
 
 const useScrollPosition = (threshold = 50) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -66,8 +65,8 @@ export const Header = () => {
             <li><a href="#">Contact</a></li>
           </ul>
         </div>
-        <a href="/assets/file/cv.pdf" download className="sm:hidden lg:block md:block bg-gray-100 font-serif text-gray-700 py-1 px-4 rounded-full shadow-md hover:bg-gray-700 hover:text-gray-300 transition duration-500 ease-in-out">Download CV</a>
-      </div>
+        <a href="/assets/file/resume.pdf" download="resume" className="sm:hidden lg:block md:block bg-gray-100 font-serif text-gray-700 py-1 px-4 rounded-full shadow-md hover:bg-gray-700 hover:text-gray-300 transition duration-500 ease-in-out">Download CV</a>
+        </div>
     </div>
   );
 };

@@ -26,9 +26,7 @@
         "./src/*"
       ]
     },
-    "types": [
-      "tailwindcss"
-    ]
+    
   },
   "include": [
     "next-env.d.ts",
