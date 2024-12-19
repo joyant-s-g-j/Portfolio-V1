@@ -7,7 +7,7 @@ const inter = Inter({subsets: ["latin"], variable: "--font-sans"});
 const calistoga = Calistoga({subsets: ["latin"], variable: "--font-serif", weight: ["400"]});
 
 export const metadata: Metadata = {
-  title: "",
+  title: "Joy-Verse",
   description: "Created by Joyant",
 };
 
@@ -20,7 +20,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/joy.svg" />
-        <title>Joy-Verse</title>
       </head>
       <body className={twMerge(inter.variable, calistoga.variable, "bg-gray-900 text-white antialiased font-sans")}>
         {children}
