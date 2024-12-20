@@ -2,6 +2,7 @@ import { AboutSection } from "@/sections/About";
 import { Header } from "@/sections/Header";
 import { HeroSection } from "@/sections/Hero";
 import Marquee from "@/components/Marquee";
+import { ProjectsSection } from "@/sections/Projects";
 export default function Home() {
   return (
     <div>
@@ -9,6 +10,7 @@ export default function Home() {
       <HeroSection />
       <Marquee />
       <AboutSection/>
+      <ProjectsSection />
     </div>
   );
 }
