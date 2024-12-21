@@ -27,9 +27,9 @@ export const ContactSection = () => {
           <div className="px-6 flex flex-col md:flex-row md:items-center justify-around items-start sm:gap-10">
             <div>
               <h3 className="text-sm font-semibold uppercase mb-4 tracking-extra-widest">Connect</h3>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-8">
                 {links.map((link, index) => (
-                  <a key={link.id} href={link.href} target="_blank" rel="noopener noreferrer" className="relative group text-3xl w-64 font-bold overflow-hidden" onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)}>
+                  <a key={link.id} href={link.href} target="_blank" rel="noopener noreferrer" className="relative group text-3xl w-48 lg:w-64 font-bold overflow-hidden" onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)}>
                     <span className={`absolute inset-0 bg-gradient-to-r from-gray-500 via-gray-600 to-gray-700 text-gray-950/90 flex items-center px-1 font-semibold transition-transform duration-500 ease-in-out transform ${hoveredIndex === index ? "scale-y-100" : "scale-y-0"} origin-center`}>
                       {link.hoverLabel}
                     </span>
