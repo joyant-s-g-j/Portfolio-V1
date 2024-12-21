@@ -3,8 +3,8 @@ import portfolio from "@/assets/images/portfolio.png";
 import Image from 'next/image';
 import CheckIcon from "@/assets/icons/check-circle.svg"
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg"
-import grainImage from "@/assets/images/grain.jpg"
 import { Card } from "@/components/Card";
+import { SectionHeader } from "@/components/SectionHeader";
 const portfolioProjects = [
   {
     title: "My Portfolio",
@@ -33,11 +33,8 @@ const portfolioProjects = [
 export const ProjectsSection = () => {
   return <section id="project" className="pt-24 mb-10 lg:mx-10 md:mx-10 sm:mx-3">
     <div className="">
-      <h1 className='text-4xl font-semibold'>My Recent Works</h1>
-      <p className="text-sm text-white/60">Explore a collection of projects that highlight my expertise, creativity, and commitment to delivering innovative solutions.</p>
-      <hr className="border-t-2 border-gray-500 w-[calc(100%-5rem)] my-3 sm:w-auto" />
-      
-      <div className="flex flex-col mt-10 gap-16 lg:max-w-full">
+      <SectionHeader title="My Recent Works" description="Explore a collection of projects that highlight my expertise, creativity, and commitment to delivering innovative solutions." />
+      <div className="flex flex-col mt-8 gap-16 lg:max-w-full">
         {portfolioProjects.map((project, projectIndex) => (
           <Card key={project.title} style={{ top: `calc(64px + ${projectIndex * 60}px)` }} className="bg-gray-800 px-8 pt-8 lg:pt-16 lg:pl-20 lg:pr-0 pb-0 rounded-3xl z-0  overflow-hidden sticky">
             <div className="lg:grid lg:grid-cols-2 lg:gap-16">
@@ -72,5 +69,3 @@ export const ProjectsSection = () => {
     </div>
   </section>;
 };
-
-// lg:w-auto lg:max-w-none lg:absolute lg:h-full

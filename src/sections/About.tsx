@@ -9,6 +9,7 @@ import { CardHeader } from '@/components/CardHeader';
 import { SkillsMaarque } from '@/components/SkillMarquee';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
+import { SectionHeader } from '@/components/SectionHeader';
 
 const hobbies = [
   {
@@ -62,10 +63,9 @@ export const AboutSection = () => {
   const imageTool = toolImage.src;
   const constraintRef = useRef(null);
   return (   
-    <section id='about' className=" pt-24 mb-10 lg:mx-10 md:mx-10 sm:mx-3">
-      <h1 className='text-4xl font-semibold'>About Me</h1>
-      <hr className="border-t-2 border-gray-500 w-[calc(100%-5rem)] my-3 sm:w-auto" />
-      <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
+    <section id='about' className="pt-24 mb-10 lg:mx-10 md:mx-10 sm:mx-3">
+      <SectionHeader title='About Me' description="I'm a passionate developer focused on creating innovative and scalable solutions, with expertise in various technologies" />
+      <div className="grid mt-8 xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <Card className="col-span-1 xl:row-span-3 border">
           <CardHeader title='My Info' imageUrl={imageWho} description="I'm Joyant, a developer skilled in HTML, CSS, JavaScript, React, C++, SQL, Python, Java, and Django, passionate about crafting functional solutions and building scalable web applications." />
         </Card>

@@ -3,6 +3,7 @@ import { Header } from "@/sections/Header";
 import { HeroSection } from "@/sections/Hero";
 import Marquee from "@/components/Marquee";
 import { ProjectsSection } from "@/sections/Projects";
+import { TestimonialsSection } from "@/sections/Testimonials";
 export default function Home() {
   return (
     <div>
@@ -11,6 +12,7 @@ export default function Home() {
       <Marquee />
       <AboutSection/>
       <ProjectsSection />
+      <TestimonialsSection />
     </div>
   );
 }

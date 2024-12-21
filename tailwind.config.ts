@@ -29,7 +29,7 @@ const config: Config = {
         serif: 'var(--font-serif)',
       },
       animation: {
-        "ping-large": "ping-large 1s ease-in-out infinite"
+        "ping-large": "ping-large 1s ease-in-out infinite",
       },
       keyframes: {
         'ping-large': {
@@ -44,10 +44,12 @@ const config: Config = {
   plugins: [
     plugin(function ({ addUtilities }) {
       addUtilities({
-        ".mask-gradient": {
-          maskImage: "linear-gradient(to bottom, transparent, black 10%, black 50%, transparent)",
-          WebkitMaskImage: "linear-gradient(to bottom, transparent, black 10%, black 50%, transparent)",
+        ".mask-gradient-r": {
+          maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
         },
+        ".mask-gradient-b": {
+          WebkitMaskImage: "linear-gradient(to bottom, transparent, black 10%, black 50%, transparent)",
+        }
       });
     }),
   ],

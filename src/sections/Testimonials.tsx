@@ -1,42 +1,54 @@
 import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
-import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
-import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
-
+import Image from "next/image";
+import { Card } from "@/components/Card";
+import { SectionHeader } from "@/components/SectionHeader";
+import Marquee from "react-fast-marquee";
+import "react-tooltip/dist/react-tooltip.css";
 const testimonials = [
   {
-    name: "Alex Turner",
-    position: "Marketing Manager @ TechStartups",
-    text: "Alex was instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
+    name: "Nayeem Hossain Faruque",
+    position: "Project Manager @ Reve System",
+    text: "Joyant's technical expertise is outstanding. His ability to deliver high-quality solutions in a timely manner makes him a reliable asset to any team. His work ethic and problem-solving skills are truly impressive",
     avatar: memojiAvatar1,
   },
   {
-    name: "Olivia Green",
-    position: "Head of Design @ GreenLeaf",
-    text: "Working with Alex was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
-    avatar: memojiAvatar2,
-  },
-  {
-    name: "Daniel White",
-    position: "CEO @ InnovateCo",
-    text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
+    name: "Rizwan Hossain",
+    position: " CEO @ Code Thousand",
+    text: "Joyant has a deep understanding of development. He has consistently demonstrated a strong ability to innovate and develop scalable solutions. Working with him was a great experience",
     avatar: memojiAvatar3,
   },
   {
-    name: "Emily Carter",
-    position: "Product Manager @ GlobalTech",
-    text: "Alex is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
-    avatar: memojiAvatar4,
-  },
-  {
-    name: "Michael Brown",
-    position: "Director of IT @ MegaCorp",
-    text: "Alex's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
+    name: "Sahid",
+    position: "CEO @ CrevoSys",
+    text: "Joyant has been key to CrevoSys' success. His deep knowledge of development and problem-solving skills have been crucial in building our platform. He quickly adapts to new technologies and consistently delivers high-quality solutions aligned with our goals",
     avatar: memojiAvatar5,
   },
 ];
 
 export const TestimonialsSection = () => {
-  return <div>Testimonials Section</div>;
+  return (
+    <div className="pt-24 mb-10 lg:mx-10 md:mx-10 sm:mx-3">
+      <SectionHeader title="Feedback from My Audience" description="Discover what my audience has to say about my work and the impact it has had on their experience" />
+      <Marquee pauseOnHover={true} autoFill={true} speed={40} direction="left" className="mt-8 flex overflow-x-clip mask-gradient-r py-4">
+        <div className="flex gap-2 flex-none">
+          {testimonials.map(testimonial => (
+            <Card key={testimonial.name} className="max-w-xs mx-2 md:max-w-md md:p-8 hover:-rotate-3 transition duration-300">
+              <div className="flex gap-4 items-center">
+                <div className="size-14 bg-gray-700 inline-flex justify-center items-center rounded-full flex-shrink-0">
+                  <Image src={testimonial.avatar} alt={testimonial.name} className="max-w-full"/>
+                </div>
+                <div>
+                  <div className="font-semibold text-white/85">{testimonial.name}</div>
+                  <div className="text-sm text-white/80">{testimonial.position}</div>
+                </div>
+              </div>
+              <p className="mt-4 text-sm md:text-base text-white/75">{testimonial.text}</p>
+            </Card>
+          ))}
+        </div>
+      </Marquee>
+    </div>
+  )
 };

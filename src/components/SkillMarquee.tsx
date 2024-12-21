@@ -3,7 +3,7 @@ import "react-tooltip/dist/react-tooltip.css";
 
 export const SkillsMaarque = () => {
   return (
-    <div className="space-y-3">
+    <div className="space-y-3 mask-gradient-r">
         
       {/* maarque for right slider */}
 
