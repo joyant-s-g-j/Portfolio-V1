@@ -28,6 +28,9 @@ const config: Config = {
         sans: 'var(--font-sans)',
         serif: 'var(--font-serif)',
       },
+      letterSpacing: {
+        'extra-widest': '0.25em', 
+      },
       animation: {
         "ping-large": "ping-large 1s ease-in-out infinite",
       },

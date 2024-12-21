@@ -15,7 +15,7 @@ const testimonials = [
   },
   {
     name: "Rizwan Hossain",
-    position: " CEO @ Code Thousand",
+    position: "Founder @ Code Thousand",
     text: "Joyant has a deep understanding of development. He has consistently demonstrated a strong ability to innovate and develop scalable solutions. Working with him was a great experience",
     avatar: memojiAvatar3,
   },

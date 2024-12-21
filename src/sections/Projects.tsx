@@ -50,13 +50,13 @@ export const ProjectsSection = () => {
                   ))}
                 </ul>
                 <a target="_blank" href={project.link}>
-                <button className="group relative mt-8 inline-flex items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-r from-gray-300/75 to-gray-700 text-gray-950 backdrop-blur-lg px-4 py-2 text-base font-semibold border border-white/20 w-[200px]" type="button">
-                  <span className="text-lg">Visit Live Site</span>
-                  <ArrowUpRightIcon className="size-6"/>
-                  <div className="absolute inset-0 flex h-full w-full justify-center transform skew-x-[-13deg] translate-x-[-100%] group-hover:duration-1000 group-hover:transform group-hover:translate-x-full">
-                    <div className="relative h-full w-10 bg-white/20"></div>
-                  </div>
-                </button>
+                  <button className="group relative mt-8 inline-flex items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-r from-gray-300/75 to-gray-700 text-gray-950 backdrop-blur-lg px-4 py-2 text-base font-semibold border border-white/20 w-[200px]" type="button">
+                    <span className="text-lg">Visit Live Site</span>
+                    <ArrowUpRightIcon className="size-6"/>
+                    <div className="absolute inset-0 flex h-full w-full justify-center transform skew-x-[-13deg] translate-x-[-100%] group-hover:duration-1000 group-hover:transform group-hover:translate-x-full">
+                      <div className="relative h-full w-10 bg-white/20"></div>
+                    </div>
+                  </button>
                 </a>
             </div>
             <div className="relative">    
