@@ -54,9 +54,13 @@ export const HeroSection = () => {
             <div className='text-sm font-semibold'>Available for New Opportunities</div>
           </div>
           <div className='max-w-lg mx-auto'>
-            <h1 className='font-semibold text-3xl md:text-5xl text-center mt-8 tracking-wide'>Creativity Ignites Digital Innovation</h1>
-            <p className='mt-4 text-center text-white/60 md:text-lg'>I turn designs into high-performing web apps. Let create impactful digital experiences together.</p>
+            <div className="flex items-center justify-center font-sans mt-6 text-white">
+              <span className="md:text-8xl sm:text-6xl font-medium">&#123;</span>
+              <span className="mx-4 md:text-4xl sm:text-xl md:mt-4 sm:mt-2 text-center font-bold">Exploring Coding<br/>Learning Writing</span>
+              <span className="md:text-8xl sm:text-6xl font-medium">&#125;</span>
             </div>
+            <p className='mt-4 text-center font-display text-white/60 md:text-lg'>I turn designs into high-performing web apps. Let create impactful digital experiences together.</p>
+          </div>
         </div> 
       </div>
     </div>

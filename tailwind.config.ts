@@ -25,8 +25,8 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: 'var(--font-sans)',
-        serif: 'var(--font-serif)',
+        sans: ['"Avant Garde"', 'sans-serif'],
+        display: ['"Nunito Sans"', 'sans-serif'],
       },
       letterSpacing: {
         'extra-widest': '0.25em', 

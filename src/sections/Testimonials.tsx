@@ -44,7 +44,7 @@ export const TestimonialsSection = () => {
                   <div className="text-sm text-white/80">{testimonial.position}</div>
                 </div>
               </div>
-              <p className="mt-4 text-sm md:text-base text-white/75">{testimonial.text}</p>
+              <p className="mt-4 text-sm md:text-base font-display text-white/75">{testimonial.text}</p>
             </Card>
           ))}
         </div>

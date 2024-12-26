@@ -8,7 +8,7 @@ export const ContactSection = () => {
   const links = [
     { id: 1, label: "Github", hoverLabel: "My Projects", href: "https://github.com/joyant-s-g-j" },
     { id: 2, label: "Instagram", hoverLabel: "Showing off", href: "https://www.instagram.com/joyant_s_g_j" },
-    { id: 3, label: "Linkedin", hoverLabel: "Serious me", href: "https://www.linkedin.com/in/joyant-s-g-j/" },
+    { id: 3, label: "Linkedin", hoverLabel: "Professional me", href: "https://www.linkedin.com/in/joyant-s-g-j/" },
     { id: 4, label: "Facebook", hoverLabel: "Time waste", href: "https://www.facebook.com/joyant.s.g.j" },
   ];
 
@@ -29,11 +29,11 @@ export const ContactSection = () => {
               <h3 className="text-sm font-semibold uppercase mb-4 tracking-extra-widest">Connect</h3>
               <div className="grid grid-cols-2 gap-4">
                 {links.map((link, index) => (
-                  <a key={link.id} href={link.href} target="_blank" rel="noopener noreferrer" className="relative group text-2xl w-48 lg:w-64 font-bold overflow-hidden" onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)}>
-                    <span className={`absolute inset-0 bg-gradient-to-r from-gray-500 via-gray-600 to-gray-700 text-gray-950/90 flex items-center px-1 font-semibold transition-transform duration-500 ease-in-out transform ${hoveredIndex === index ? "scale-y-100" : "scale-y-0"} origin-center`}>
+                  <a key={link.id} href={link.href} target="_blank" rel="noopener noreferrer" className="relative group text-2xl w-48 lg:w-64 font-bold overflow-hidden" >
+                    <span className={`absolute inset-0 bg-gradient-to-r from-gray-500 via-gray-600 font-sans to-gray-700 text-gray-950/80 flex items-center px-1 font-semibold transition-transform duration-500 ease-in-out transform ${hoveredIndex === index ? "scale-y-100" : "scale-y-0"} origin-center`}>
                       {link.hoverLabel}
                     </span>
-                    <span className={`relative transition-opacity duration-300 ${hoveredIndex === index ? "opacity-0" : "opacity-100"}`}>
+                    <span className={`relative transition-opacity font-sans duration-300 ${hoveredIndex === index ? "opacity-0" : "opacity-100"}`} onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)}>
                       {link.label}
                     </span>
                   </a>
@@ -47,7 +47,7 @@ export const ContactSection = () => {
                   <span className={`absolute inset-0 bg-gradient-to-r from-gray-500 via-gray-600 to-gray-700 text-gray-950/90 flex items-center px-3 font-semibold transition-transform duration-500 ease-in-out transform scale-y-0 group-hover:scale-y-100 origin-center`}>
                   Click to email me — <br /> I’ll definitely read it!
                   </span>
-                  <span className="relative text-sm transition-opacity duration-300 group-hover:opacity-0">
+                  <span className="relative text-sm text-gray-400 transition-opacity duration-300 group-hover:opacity-0">
                     joyantsheikharguptajoy@gmail.com
                   </span>
                 </a>
