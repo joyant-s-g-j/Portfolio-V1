@@ -1,5 +1,5 @@
 import smartCare from "@/assets/images/smartcare.png";
-import portfolio from "@/assets/images/portfolio.png";
+import obys from "@/assets/images/obys.png";
 import Image from 'next/image';
 import CheckIcon from "@/assets/icons/check-circle.svg"
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg"
@@ -7,14 +7,14 @@ import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
 const portfolioProjects = [
   {
-    title: "My Portfolio",
+    title: "Obys Agency Clone",
     results: [
-      { title: "Showcased skills, boosting professional credibility by 20%" },
-      { title: "Improved audience reach and visibility by 35%" },
-      { title: "Enhanced personal brand awareness by 15%" },
+      { title: "Recreated a modern agency website to demonstrate web development skills." },
+      { title: "Achieved 25% improvement in design consistency and responsiveness." },
+      { title: "Enhanced UI/UX experience, boosting project presentation value by 30%" },
     ],
-    link: "https://joyant.me/",
-    image: portfolio,
+    link: "https://obys-agency-clone-jet.vercel.app/",
+    image: obys,
   },
   {
     title: "Hospital Management System",
