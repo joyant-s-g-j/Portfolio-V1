@@ -45,9 +45,6 @@ export const Header = () => {
           <div tabIndex={0} role="button" className="btn btn-ghost text-white" onClick={toggleMenu}>
           {isMenuOpen ? (
             // Cross Icon
-            // <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            //   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-            // </svg>
             <svg className="menu-opener__squarer" width="12" height="12" viewBox="0 0 12 12" fill="none">
               <rect y="10" width="2" height="2" fill="currentColor"></rect>
               <rect width="2" height="2" fill="currentColor"></rect>
@@ -57,12 +54,6 @@ export const Header = () => {
             </svg>
           ) : (
             // Hamburger Icon
-            // <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            //   <line x1="3" y1="6" x2="21" y2="6"></line>
-            //   <line x1="3" y1="12" x2="21" y2="12"></line>
-            //   <line x1="10" y1="18" x2="21" y2="18"></line>
-            // </svg>
-
             <svg className="menu-opener__square" width="12" height="12" viewBox="0 0 12 12" fill="none">
               <rect y="10" width="2" height="2" fill="currentColor"></rect>
               <rect y="5" width="2" height="2" fill="currentColor"></rect>
