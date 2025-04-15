@@ -1,8 +1,8 @@
-import obys from "@/assets/images/obys.png";
 import onubhuti from "@/assets/images/onubhuti.png"
+import alapon from "@/assets/images/alapon.png"
+import nuptalk from "@/assets/images/nuptalk.png"
 import Image from 'next/image';
 import CheckIcon from "@/assets/icons/check-circle.svg"
-import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg"
 import { ExternalLink, Code } from "lucide-react";
 import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -19,15 +19,26 @@ const portfolioProjects = [
     image: onubhuti
   },
   {
-    title: "Obys Agency Clone",
+    title: "Alapon",
     results: [
-      { title: "Recreated a modern agency website to demonstrate web development skills." },
-      { title: "Achieved 25% improvement in design consistency and responsiveness." },
-      { title: "Enhanced UI/UX experience, boosting project presentation value by 30%" },
+      { title: "Host instant or scheduled video meetings with recording, screen sharing, and real-time reactions." },
+      { title: "Built with Next.js, React, Clerk, and Stream for smooth and secure collaboration." },
+      { title: "Clean, responsive UI using Tailwind CSS & ShadCN with dark/light mode support." }
     ],
-    liveLink: "https://obys-agency-clone-jet.vercel.app/",
-    repoLink: "https://github.com/joyant-s-g-j/Obys-Agency-Clone",
-    image: obys,
+    liveLink: "https://alaponmeeting.vercel.app/",
+    repoLink: "https://github.com/joyant-s-g-j/Alapon",
+    image: alapon
+  },
+  {
+    title: "NupTalk",
+    results: [
+      { title: "Real-time chat app with instant messaging, online status, and JWT-based auth." },
+      { title: "Built using MERN stack, Socket.io, and Zustand for smooth state and communication." },
+      { title: " Modern UI styled with Tailwind CSS and Daisy UI." },
+    ],
+    liveLink: "https://nuptalk.onrender.com/",
+    repoLink: "https://github.com/joyant-s-g-j/NupTalk",
+    image: nuptalk,
   },
   
 ];
