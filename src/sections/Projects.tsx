@@ -1,11 +1,21 @@
-import smartCare from "@/assets/images/smartcare.png";
 import obys from "@/assets/images/obys.png";
+import onubhuti from "@/assets/images/onubhuti.png"
 import Image from 'next/image';
 import CheckIcon from "@/assets/icons/check-circle.svg"
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg"
 import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
 const portfolioProjects = [
+  {
+    title: "Onubhuti",
+    results: [
+      { title: "Share photos, post statuses, follow/unfollow, and get notifications." },
+      { title: "Built with Next.js, TypeScript, Clerk, Prisma, and UploadThing." },
+      { title: "Clean UI with Tailwind CSS & ShadCN, supports dark/light mode." }
+    ],
+    link: "https://onubhuti.vercel.app/",
+    image: onubhuti
+  },
   {
     title: "Obys Agency Clone",
     results: [
@@ -16,18 +26,7 @@ const portfolioProjects = [
     link: "https://obys-agency-clone-jet.vercel.app/",
     image: obys,
   },
-  {
-    title: "Hospital Management System",
-    results: [
-      { title: "Streamlined hospital operations with advanced management tools" },
-      { title: "Enhanced user experience and engagement by 40%" },
-      { title: "Optimized site speed, leading to a 50% performance boost" },
-      { title: "Facilitated a 35% increase in mobile-friendly access" },
-    ],
-    link: "https://github.com/joyant-s-g-j/SmartCare",
-    image: smartCare,
-  },
-
+  
 ];
 
 export const ProjectsSection = () => {
@@ -52,7 +51,8 @@ export const ProjectsSection = () => {
                 <a target="_blank" href={project.link}>
                   <button className="group relative mt-8 inline-flex items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-r from-gray-300/75 to-gray-700 text-gray-950 backdrop-blur-lg px-4 py-2 text-base font-semibold border border-white/20 w-[200px]" type="button">
                     <span className="text-lg">Visit Live Site</span>
-                    <ArrowUpRightIcon className="size-6"/>
+                    {/* <ArrowUpRightIcon className="size-6"/> */}
+                    
                     <div className="absolute inset-0 flex h-full w-full justify-center transform skew-x-[-13deg] translate-x-[-100%] group-hover:duration-1000 group-hover:transform group-hover:translate-x-full">
                       <div className="relative h-full w-10 bg-white/20"></div>
                     </div>
