@@ -29,7 +29,7 @@ function MobileNavbar() {
                         <FolderCog className='size-5'/>Project
                     </a>
                     <a href="/assets/file/Joyant_Resume.pdf" download="Joyant_Resume">
-                        <button className='flex gap-3'>
+                        <button className='flex gap-3' type="button">
                             <Download className='size-5' />Resume
                         </button>
                     </a>
