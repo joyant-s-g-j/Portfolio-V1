@@ -28,8 +28,10 @@ function MobileNavbar() {
                     <a href="#project" onClick={() => setShowMobileMenu(false)} className='flex gap-3'>
                         <FolderCog className='size-5'/>Project
                     </a>
-                    <a href="/assets/file/Joyant_Resume.pdf" download="Joyant_Resume" className='flex gap-3'>
-                        <Download className='size-5' />Resume
+                    <a href="/assets/file/Joyant_Resume.pdf" download="Joyant_Resume">
+                        <button className='flex gap-3'>
+                            <Download className='size-5' />Resume
+                        </button>
                     </a>
                 </div>
             </SheetContent>
