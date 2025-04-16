@@ -56,15 +56,14 @@ export const ProjectsSection = () => {
                 <ul className="flex flex-col gap-4 mt-4">
                   {project.results.map((result, index) => (
                     <li key={index} className="flex gap-2 text-sm text-white/60">
-                      {/* <CheckIcon className="size-5" /> */}
                       <CheckCircle className="size-5" />
                       <span>{result.title}</span>
                     </li>
                   ))}
                 </ul>
-                <div className="flex gap-2 mt-8 ">
+                <div className="mt-8 flex flex-col items-center gap-y-4 md:flex md:flex-row md:gap-x-2">
                   <a target="_blank" href={project.liveLink}>
-                    <button className="group relative gap-2 inline-flex items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-r from-gray-300/75 to-gray-700 text-gray-950 backdrop-blur-lg px-4 py-2 text-base font-semibold border border-white/20 w-[150px]" type="button">
+                    <button className="group relative gap-2 inline-flex items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-r from-gray-300/75 to-gray-700 text-gray-950 backdrop-blur-lg px-4 py-2 text-base font-semibold border border-white/20 w-[200px]" type="button">
                       <span className="text-lg">Live Site</span>
                       <ExternalLink className="size-6" />
                       <div className="absolute inset-0 flex h-full w-full justify-center transform skew-x-[-13deg] translate-x-[-100%] group-hover:duration-1000 group-hover:transform group-hover:translate-x-full">
@@ -73,7 +72,7 @@ export const ProjectsSection = () => {
                     </button>
                   </a>
                   <a target="_blank" href={project.repoLink}>
-                    <button className="group relative gap-2 inline-flex items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-r from-gray-300/75 to-gray-700 text-gray-950 backdrop-blur-lg px-4 py-2 text-base font-semibold border border-white/20 w-[150px]" type="button">
+                    <button className="group relative gap-2 inline-flex items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-r from-gray-300/75 to-gray-700 text-gray-950 backdrop-blur-lg px-4 py-2 text-base font-semibold border border-white/20 w-[200px]" type="button">
                       <span className="text-lg">Git Repo</span>
                       <Code2 className="size-6" />
                       <div className="absolute inset-0 flex h-full w-full justify-center transform skew-x-[-13deg] translate-x-[-100%] group-hover:duration-1000 group-hover:transform group-hover:translate-x-full">
