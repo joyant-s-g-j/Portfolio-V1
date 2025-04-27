@@ -1,8 +1,9 @@
 "use client"
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetHeader, SheetTrigger } from '@/components/ui/sheet'
-import { FileText, FolderCog, HomeIcon, MenuIcon, MessageCircle, UserIcon } from 'lucide-react'
+import { Contact2Icon, FileText, FolderCog, HomeIcon, MenuIcon, UserIcon } from 'lucide-react'
 import React, { useState } from 'react'
+import grainImage from "@/assets/images/grain.jpg"
 
 function MobileNavbar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
@@ -14,7 +15,11 @@ function MobileNavbar() {
                     <MenuIcon className='' />
                 </Button>
             </SheetTrigger>
-            <SheetContent side="right" className='bg-slate-900 text-white'>
+            <SheetContent side="right" className=' bg-gray-800 text-white'>
+                <div className='absolute inset-0 -z-10 opacity-5' style={{
+                    backgroundImage: `url(${grainImage.src})`,
+                    }}>
+                </div>
                 <SheetHeader>
                     <h2 className='text-lg font-semibold'>Menu</h2>
                 </SheetHeader>
@@ -29,7 +34,7 @@ function MobileNavbar() {
                         <FolderCog className='size-5'/>Project
                     </a>
                     <a href="#contact" onClick={() => setShowMobileMenu(false)} className='flex gap-3'>
-                        <MessageCircle className='size-5'/>Contact
+                        <Contact2Icon className='size-5'/>Contact
                     </a>
                     <a href="/assets/file/Joyant_Resume.pdf" target='_blank'>
                         <button className='flex gap-3' type="button">

@@ -48,7 +48,7 @@ export const ProjectsSection = () => {
       <SectionHeader title="My Recent Works" description="Explore a collection of projects that highlight my expertise, creativity, and commitment to delivering innovative solutions." />
       <div className="flex flex-col mt-8 gap-16 lg:max-w-full">
         {portfolioProjects.map((project, projectIndex) => (
-          <Card key={project.title} style={{ top: `calc(64px + ${projectIndex * 60}px)` }} className="bg-gray-800 px-8 pt-8 lg:pt-16 lg:pl-20 lg:pr-0 pb-0 rounded-3xl z-0  overflow-hidden sticky">
+          <Card key={project.title} style={{ top: `calc(64px + ${projectIndex * 60}px)` }} className="bg-gray-800 px-8 pt-8 lg:pt-16 lg:pl-20 lg:pr-0 pb-0 rounded-3xl z-0 overflow-hidden sticky">
             <div className="lg:grid lg:grid-cols-2 lg:gap-16">
               <div className="pb-16">
                 <h1 className="text-2xl mt-2 font-semibold">{project.title}</h1>
