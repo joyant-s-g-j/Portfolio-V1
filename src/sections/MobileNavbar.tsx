@@ -1,17 +1,17 @@
 "use client"
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetHeader, SheetTrigger } from '@/components/ui/sheet'
-import { Download, FolderCog, HomeIcon, MenuIcon, UserIcon } from 'lucide-react'
+import { FileText, FolderCog, HomeIcon, MenuIcon, MessageCircle, UserIcon } from 'lucide-react'
 import React, { useState } from 'react'
 
 function MobileNavbar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   return (
-    <div className='flex md:hidden items-center space-x-2'>
+    <div className='flex lg:hidden items-center space-x-2'>
         <Sheet open={showMobileMenu} onOpenChange={setShowMobileMenu}>
             <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
-                    <MenuIcon className='size-8' />
+                    <MenuIcon className='' />
                 </Button>
             </SheetTrigger>
             <SheetContent side="right" className='bg-slate-900 text-white'>
@@ -28,9 +28,12 @@ function MobileNavbar() {
                     <a href="#project" onClick={() => setShowMobileMenu(false)} className='flex gap-3'>
                         <FolderCog className='size-5'/>Project
                     </a>
-                    <a href="/assets/file/Joyant_Resume.pdf" download="Joyant_Resume">
+                    <a href="#contact" onClick={() => setShowMobileMenu(false)} className='flex gap-3'>
+                        <MessageCircle className='size-5'/>Contact
+                    </a>
+                    <a href="/assets/file/Joyant_Resume.pdf" target='_blank'>
                         <button className='flex gap-3' type="button">
-                            <Download className='size-5' />Resume
+                            <FileText className='size-5' />Resume
                         </button>
                     </a>
                 </div>

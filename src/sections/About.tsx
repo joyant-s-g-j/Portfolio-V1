@@ -45,15 +45,21 @@ const hobbies = [
   {
     title: 'Reading',
     emoji: '📚',
-    left: "60%",
-    top: "70%"
+    left: "45%",
+    top: "60%"
   },
   {
     title: 'Music',
     emoji: '🎵',
-    left: "20%",
+    left: "5%",
     top: "70%"
   },
+  {
+    title: 'Running',
+    emoji: '🏃‍♂️',
+    left: "35%",
+    top: "80%"
+  }
 ]
 
 const Globe = dynamic(() => import('react-globe.gl'), { ssr: false });

@@ -8,7 +8,7 @@ export const ContactSection = () => {
   const links = [
     { id: 1, label: "Github", hoverLabel: "My Projects", href: "https://github.com/joyant-s-g-j" },
     { id: 2, label: "Instagram", hoverLabel: "Showing off", href: "https://www.instagram.com/joyant_s_g_j" },
-    { id: 3, label: "Linkedin", hoverLabel: "Professional me", href: "https://www.linkedin.com/in/joyant-s-g-j/" },
+    { id: 3, label: "Linkedin", hoverLabel: "Professional", href: "https://www.linkedin.com/in/joyant-s-g-j/" },
     { id: 4, label: "Facebook", hoverLabel: "Time waste", href: "https://www.facebook.com/joyant.s.g.j" },
   ];
 

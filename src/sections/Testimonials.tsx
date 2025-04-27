@@ -9,7 +9,7 @@ import "react-tooltip/dist/react-tooltip.css";
 const testimonials = [
   {
     name: "Nayeem Hossain Faruque",
-    position: "Project Manager @ Reve System",
+    position: "Database Admin @ Dohatec",
     text: "Joyant's technical expertise is outstanding. His ability to deliver high-quality solutions in a timely manner makes him a reliable asset to any team. His work ethic and problem-solving skills are truly impressive",
     avatar: memojiAvatar1,
   },

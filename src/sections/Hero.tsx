@@ -1,6 +1,5 @@
-import myImage from '@/assets/images/joy.png'
+import myImage from '@/assets/images/joyant.png'
 import Image from 'next/image';
-import grainImage from "@/assets/images/grain.jpg"
 import ReactIcon from "@/assets/icons/react.svg"
 import PythonIcon from "@/assets/icons/python.svg"
 import { HeroOrbit } from '@/components/HeroOrbit';
@@ -9,10 +8,6 @@ export const HeroSection = () => {
     <div data-scroll data-scroll-section data-scroll-speed="-.3">
     <div id='home' className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip'>
       <div className="absolute inset-0 mask-gradient-b">
-        <div className='absolute inset-0 -z-30 opacity-5' style={{
-          backgroundImage: `url(${grainImage.src})`,
-        }}>
-        </div>
         <div className='size-[650px] hero-ring'></div>
         <div className='size-[850px] hero-ring'></div>
         <div className='size-[1050px] hero-ring'></div>
@@ -21,7 +16,7 @@ export const HeroSection = () => {
         <HeroOrbit size={800} rotation={-90}> 
           <ReactIcon className='size-28 text-emerald-400 animate-spin [animation-duration:20s]'/>
         </HeroOrbit>
-        <HeroOrbit size={550} rotation={20}> 
+        <HeroOrbit size={550} rotation={65}> 
           <ReactIcon className='size-12 text-emerald-400 animate-spin [animation-duration:20s]'/>
         </HeroOrbit>
         <HeroOrbit size={600} rotation={100}> 

@@ -24,7 +24,6 @@ export default function RootLayout({
       </head>
       <body className={twMerge("bg-gray-900 text-white antialiased font-sans", "font-sans")}>
         {children}
-        
       </body>
     </html>
   );
