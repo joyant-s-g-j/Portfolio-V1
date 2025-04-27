@@ -1,18 +1,19 @@
 # 🚀 Portfolio Website
 
-This is my personal portfolio website built with **Next.js 14**, **React 18**, **Tailwind CSS**, **Three.js**, and more modern libraries to showcase my projects, skills, and experiences.
+This is my personal portfolio website built to showcase my projects, skills, and experiences.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Framework:** [Next.js 14](https://nextjs.org/)
-- **Frontend:** [React 18](https://react.dev/), [Tailwind CSS](https://tailwindcss.com/), [Sass](https://sass-lang.com/)
-- **Animation & Effects:** [Framer Motion](https://www.framer.com/motion/), [Locomotive Scroll](https://locomotivemtl.github.io/locomotive-scroll/), [React Fast Marquee](https://www.npmjs.com/package/react-fast-marquee)
-- **3D Graphics:** [Three.js](https://threejs.org/), [@react-three/fiber](https://github.com/pmndrs/react-three-fiber), [@react-three/drei](https://github.com/pmndrs/drei)
-- **Globe Visualization:** [Globe.gl](https://github.com/vasturiano/globe.gl), [React Globe.gl](https://github.com/vasturiano/react-globe.gl)
-- **Icons:** [Lucide React](https://lucide.dev/)
-- **Tooling:** [TypeScript](https://www.typescriptlang.org/), [ESLint](https://eslint.org/), [PostCSS](https://postcss.org/)
+- **Framework:** Next.js 14
+- **Frontend:** React 18, Tailwind CSS, Sass
+- **UI Components:** ShadCN
+- **Animation & Effects:** Framer Motion, Locomotive Scroll, React Fast Marquee
+- **3D Graphics:** Three.js, @react-three/fiber, @react-three/drei
+- **Globe Visualization:** Globe.gl, React Globe.gl
+- **Icons:** Lucide React
+- **Tooling:** TypeScript, ESLint, PostCSS
 
 ---
 
