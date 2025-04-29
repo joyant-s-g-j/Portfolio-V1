@@ -1,6 +1,7 @@
 import onubhuti from "@/assets/images/onubhuti.png"
 import alapon from "@/assets/images/alapon.png"
 import nuptalk from "@/assets/images/nuptalk.png"
+import prochchhod from "@/assets/images/prochchhod.png"
 import Image from 'next/image';
 import { ExternalLink, Code2, CheckCircle } from "lucide-react";
 import { Card } from "@/components/Card";
@@ -39,6 +40,17 @@ const portfolioProjects = [
     repoLink: "https://github.com/joyant-s-g-j/NupTalk",
     image: nuptalk,
   },
+  {
+    title: "Prochchhod",
+    results: [
+      {title: "Personalized Cover Pages: Create custom assignment covers for ADUST using React."},
+      {title: "PDF Export: Download clean PDFs with React and React-PDF."},
+      {title: "Modern UI: Smooth, responsive design with React, Chakra UI & Framer Motion."}
+    ],
+    liveLink: "https://prochchhod.vercel.app/",
+    repoLink: "https://github.com/joyant-s-g-j/Prochchhod",
+    image: prochchhod
+  }
   
 ];
 
