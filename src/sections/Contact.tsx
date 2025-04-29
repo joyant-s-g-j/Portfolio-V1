@@ -3,6 +3,7 @@
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 import React, { useState } from "react";
+import { CheckIcon, CopyIcon } from "lucide-react";
 
 export const ContactSection = () => {
   const links = [
@@ -13,7 +14,17 @@ export const ContactSection = () => {
   ];
 
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hasCopied, setHasCopied] = useState(false);
 
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText("joyantsheikharguptajoy@gmail.com");
+      setHasCopied(true);
+      setTimeout(() => setHasCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+  };
   return (
     <div id="contact" className="pt-24 mb-10 lg:mx-10 md:mx-10 sm:mx-3">
       <SectionHeader title="Get in Touch" description="Feel free to reach out to discuss projects, ideas, or collaboration opportunities. I’d love to hear from you!"/>
@@ -42,15 +53,26 @@ export const ContactSection = () => {
             </div>
             <div>
                 <h3 className="text-sm font-semibold uppercase tracking-extra-widest">Contact</h3>          
-                <a href="mailto:joyantsheikharguptajoy@gmail.com" className="relative inline-block font-semibold tracking-wide group overflow-hidden">
-                  <p className=" font-semibold pt-2 text-2xl tracking-wide">Email Me</p>
-                  <span className={`absolute inset-0 bg-gradient-to-r from-gray-500 via-gray-600 to-gray-700 text-gray-950/90 flex items-center px-3 font-semibold transition-transform duration-500 ease-in-out transform scale-y-0 group-hover:scale-y-100 origin-center`}>
-                  Click to email me — <br /> I’ll definitely read it!
-                  </span>
-                  <span className="relative text-sm text-gray-400 transition-opacity duration-300 group-hover:opacity-0">
-                    joyantsheikharguptajoy@gmail.com
-                  </span>
-                </a>
+                  <div className="flex gap-2">
+                    <a href="mailto:joyantsheikharguptajoy@gmail.com" className="relative inline-block font-semibold tracking-wide group overflow-hidden">
+                      <p className=" font-semibold pt-2 text-2xl tracking-wide">Email Me</p>
+                      <span className={`absolute inset-0 bg-gradient-to-r from-gray-500 via-gray-600 to-gray-700 text-gray-950/90 flex items-center px-3 font-semibold transition-transform duration-500 ease-in-out transform scale-y-0 group-hover:scale-y-100 origin-center`}>
+                        Click to email me — <br /> I’ll definitely read it!
+                      </span>
+                      <span className="relative text-sm text-gray-400 transition-opacity duration-300 group-hover:opacity-0">
+                        joyantsheikharguptajoy@gmail.com
+                      </span>
+                    </a>
+                    <div className="py-3">
+                      <button
+                        onClick={handleCopy}
+                        className="p-1 rounded-md bg-transparent border border-slate-500"
+                        aria-label="Copy email"
+                      >
+                        {hasCopied ? <CheckIcon size={20} /> : <CopyIcon size={20} />}
+                      </button>
+                    </div>
+                  </div>
               </div>
 
           </div>
